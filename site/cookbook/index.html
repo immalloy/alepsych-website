@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ALE Psych Engine Cookbook</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/cookbook/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/cookbook/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/cookbook/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/icons/cookbook/favicon-192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="../assets/icons/cookbook/favicon-512.png" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github-dark.min.css" />
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #1a0f0a;
+      --panel: #27160e;
+      --panel-alt: #21120a;
+      --text: #fff6ef;
+      --muted: #f1d7c6;
+      --border: #5a2a12;
+      --accent: #ff8a3d;
+      --accent-strong: #ffc28f;
+      --accent-secondary: #ff6a1f;
+      --accent-secondary-strong: #ffb070;
+      --glow: rgba(255, 138, 61, 0.22);
+      --glow-secondary: rgba(255, 106, 31, 0.26);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+    }
+
+    header {
+      grid-column: 1 / -1;
+      padding: 20px 28px;
+      background: linear-gradient(120deg, #2c1408 0%, #3a1a0b 55%, #2a1308 100%);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 16px 30px rgba(16, 8, 4, 0.45);
+      gap: 20px;
+    }
+
+    .header-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: nowrap;
+      justify-content: flex-end;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+
+    .header-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 160, 90, 0.5);
+      color: var(--text);
+      text-decoration: none;
+      background: rgba(255, 160, 90, 0.16);
+      box-shadow: 0 8px 16px rgba(24, 10, 4, 0.35);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .header-home:hover,
+    .header-home:focus-visible {
+      background: rgba(255, 160, 90, 0.28);
+      border-color: rgba(255, 181, 120, 0.7);
+    }
+
+    .language-switch {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 160, 90, 0.45);
+      background: rgba(255, 160, 90, 0.12);
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .language-switch select {
+      background: transparent;
+      color: var(--text);
+      border: none;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .language-switch option {
+      color: #1c120a;
+    }
+
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .header-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      background: radial-gradient(circle at top, #ffd0a6 0%, #ff9c57 45%, #ff6a1f 100%);
+      padding: 8px;
+      box-shadow: 0 10px 22px rgba(255, 138, 61, 0.3);
+    }
+
+    .header-icon img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: contain;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 600;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    #layout {
+      display: contents;
+    }
+
+    aside {
+      padding: 20px;
+      background: var(--panel-alt);
+      border-right: 1px solid var(--border);
+      overflow-y: auto;
+      box-shadow: inset -20px 0 40px rgba(18, 10, 4, 0.35);
+    }
+
+    main {
+      padding: 32px 40px 48px;
+      overflow-y: auto;
+      background: radial-gradient(circle at top left, rgba(255, 160, 90, 0.1), transparent 45%);
+    }
+
+    .search {
+      margin-bottom: 18px;
+    }
+
+    .search input {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: #1c120a;
+      color: var(--text);
+      box-shadow: inset 0 0 0 1px rgba(255, 160, 90, 0.12);
+    }
+
+    .category {
+      margin-bottom: 12px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: #1c120a;
+      box-shadow: 0 10px 18px rgba(18, 10, 4, 0.35);
+    }
+
+    .category summary {
+      cursor: pointer;
+      list-style: none;
+      padding: 10px 12px;
+      font-weight: 600;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+      letter-spacing: 0.2px;
+    }
+
+    .category summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .category ul {
+      list-style: none;
+      margin: 0;
+      padding: 6px 0;
+    }
+
+    .category li {
+      margin: 0;
+    }
+
+    .doc-link {
+      display: block;
+      padding: 8px 12px;
+      color: var(--muted);
+      text-decoration: none;
+      border-left: 2px solid transparent;
+    }
+
+    .doc-link:hover,
+    .doc-link:focus {
+      color: var(--text);
+      background: var(--glow-secondary);
+    }
+
+    .doc-link.active {
+      color: var(--text);
+      border-left-color: var(--accent-secondary);
+      background: linear-gradient(90deg, rgba(255, 106, 31, 0.25), rgba(255, 138, 61, 0.12));
+    }
+
+    .content {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .content h1 {
+      margin-top: 0;
+      font-size: 30px;
+      color: var(--accent-secondary-strong);
+    }
+
+    .content h2 {
+      margin-top: 24px;
+      font-size: 21px;
+      color: var(--accent);
+    }
+
+    .content h3 {
+      margin-top: 20px;
+      font-size: 18px;
+      color: var(--accent-secondary);
+    }
+
+    .content p,
+    .content li {
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .content ul {
+      padding-left: 20px;
+    }
+
+    .content ol {
+      padding-left: 24px;
+    }
+
+    .content hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 24px 0;
+    }
+
+    .content a {
+      color: var(--accent-secondary-strong);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 160, 90, 0.4);
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .content a:hover,
+    .content a:focus-visible {
+      color: var(--accent);
+      border-bottom-color: rgba(255, 181, 120, 0.75);
+    }
+
+    .content img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 18px auto;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 160, 90, 0.25);
+      box-shadow: 0 12px 24px rgba(24, 10, 4, 0.35);
+    }
+
+    .content blockquote {
+      margin: 16px 0;
+      padding: 12px 16px;
+      border-left: 3px solid var(--accent-secondary);
+      background: rgba(255, 160, 90, 0.12);
+      color: var(--muted);
+    }
+
+    .content pre {
+      background: #1c120a;
+      padding: 14px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      overflow-x: auto;
+      box-shadow: inset 0 0 0 1px rgba(255, 160, 90, 0.08);
+    }
+
+    .content code {
+      font-family: "Consolas", "SFMono-Regular", monospace;
+      color: var(--text);
+    }
+
+    .content :not(pre) > code {
+      background: rgba(255, 160, 90, 0.15);
+      padding: 2px 6px;
+      border-radius: 4px;
+      border: 1px solid rgba(255, 160, 90, 0.25);
+    }
+
+    .content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 18px 0;
+      color: var(--muted);
+    }
+
+    .content th,
+    .content td {
+      border: 1px solid var(--border);
+      padding: 8px 10px;
+      text-align: left;
+    }
+
+    .content thead th {
+      background: rgba(255, 160, 90, 0.2);
+      color: var(--text);
+    }
+
+    @media (max-width: 900px) {
+      body {
+        grid-template-columns: 1fr;
+      }
+
+      aside {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-brand">
+      <div class="header-icon">
+        <img src="../assets/icons/cookbook/favicon-512.png" alt="Cookbook icon" />
+      </div>
+      <h1>ALE Psych Engine Cookbook</h1>
+    </div>
+    <div class="header-actions">
+      <div class="language-switch">
+        <label for="language-select" class="visually-hidden">Language</label>
+        <span id="language-label">Language</span>
+        <select id="language-select" aria-labelledby="language-label">
+          <option value="en">English</option>
+          <option value="es">Español</option>
+        </select>
+      </div>
+      <a class="header-home" href="../../index.html">Back to homepage</a>
+    </div>
+  </header>
+  <div id="layout">
+    <aside>
+      <div class="search">
+        <input id="search" type="text" placeholder="Search pages" aria-label="Search pages" />
+      </div>
+      <nav id="sidebar"></nav>
+    </aside>
+    <main>
+      <div id="content" class="content">
+        <h1>Loading</h1>
+        <p>Fetching documentation data.</p>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.6/dist/purify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/common.min.js"></script>
+  <script>
+    const sidebar = document.getElementById('sidebar');
+    const content = document.getElementById('content');
+    const searchInput = document.getElementById('search');
+    const headerTitle = document.querySelector('header h1');
+    const homeLink = document.querySelector('.header-home');
+    const languageSelect = document.getElementById('language-select');
+    const languageLabel = document.getElementById('language-label');
+
+    const uiCopy = {
+      en: {
+        pageTitle: 'ALE Psych Engine Cookbook',
+        headerTitle: 'ALE Psych Engine Cookbook',
+        backHome: 'Back to homepage',
+        searchPlaceholder: 'Search pages',
+        loadingTitle: 'Loading',
+        loadingText: 'Fetching documentation data.',
+        docNotFoundTitle: 'Document not found',
+        docNotFoundText: 'Please select a page from the sidebar.',
+        docLoadErrorTitle: 'Unable to load document',
+        docLoadErrorText: 'Please try again later.',
+        dataLoadErrorTitle: 'Unable to load cookbook data',
+        dataLoadErrorText: 'Please check the data file.',
+        languageLabel: 'Language',
+      },
+      es: {
+        pageTitle: 'Libro de cocina de ALE Psych Engine',
+        headerTitle: 'Libro de cocina de ALE Psych Engine',
+        backHome: 'Volver al inicio',
+        searchPlaceholder: 'Buscar páginas',
+        loadingTitle: 'Cargando',
+        loadingText: 'Obteniendo datos de la documentación.',
+        docNotFoundTitle: 'Documento no encontrado',
+        docNotFoundText: 'Selecciona una página desde la barra lateral.',
+        docLoadErrorTitle: 'No se pudo cargar el documento',
+        docLoadErrorText: 'Inténtalo de nuevo más tarde.',
+        dataLoadErrorTitle: 'No se pudieron cargar los datos del cookbook',
+        dataLoadErrorText: 'Revisa el archivo de datos.',
+        languageLabel: 'Idioma',
+      },
+    };
+
+    const dataFiles = {
+      en: 'en/cookbook-data.json',
+      es: 'es/cookbook-data.json',
+    };
+
+    let docs = [];
+    let linkElements = new Map();
+    let activeLanguage = 'en';
+
+    function getUiCopy() {
+      return uiCopy[activeLanguage] || uiCopy.en;
+    }
+
+    function renderMarkdown(markdown) {
+      const stripped = markdown.replace(/^---[\s\S]*?---\s*/, '');
+      const rendered = marked.parse(stripped);
+      const sanitized = DOMPurify.sanitize(rendered, { USE_PROFILES: { html: true } });
+      return sanitized || '<p>No content available.</p>';
+    }
+
+    if (window.marked) {
+      marked.setOptions({
+        gfm: true,
+        breaks: false,
+        headerIds: false,
+        mangle: false,
+        langPrefix: 'language-',
+        highlight(code, language) {
+          if (window.hljs) {
+            if (language && hljs.getLanguage(language)) {
+              return hljs.highlight(code, { language }).value;
+            }
+            return hljs.highlightAuto(code).value;
+          }
+          return code;
+        },
+      });
+    }
+
+    function setActiveLink(slug) {
+      linkElements.forEach((link, key) => {
+        link.classList.toggle('active', key === slug);
+      });
+    }
+
+    function loadDoc(doc) {
+      const ui = getUiCopy();
+      if (!doc) {
+        content.innerHTML = `<h1>${ui.docNotFoundTitle}</h1><p>${ui.docNotFoundText}</p>`;
+        return;
+      }
+      setActiveLink(doc.slug);
+      fetch(doc.path)
+        .then((res) => res.text())
+        .then((text) => {
+          content.innerHTML = renderMarkdown(text);
+        })
+        .catch(() => {
+          content.innerHTML = `<h1>${ui.docLoadErrorTitle}</h1><p>${ui.docLoadErrorText}</p>`;
+        });
+    }
+
+    function buildSidebar(items) {
+      sidebar.innerHTML = '';
+      linkElements = new Map();
+      const categories = new Map();
+
+      items.forEach((item) => {
+        if (!categories.has(item.category)) {
+          categories.set(item.category, []);
+        }
+        categories.get(item.category).push(item);
+      });
+
+      categories.forEach((docsInCategory, categoryName) => {
+        const details = document.createElement('details');
+        details.className = 'category';
+        details.open = true;
+
+        const summary = document.createElement('summary');
+        summary.textContent = categoryName;
+        details.appendChild(summary);
+
+        const list = document.createElement('ul');
+        docsInCategory.forEach((doc) => {
+          const listItem = document.createElement('li');
+          const link = document.createElement('a');
+          link.href = `#${doc.slug}`;
+          link.textContent = doc.title;
+          link.className = 'doc-link';
+          link.addEventListener('click', (event) => {
+            event.preventDefault();
+            history.replaceState(null, '', `#${doc.slug}`);
+            loadDoc(doc);
+          });
+          linkElements.set(doc.slug, link);
+          listItem.appendChild(link);
+          list.appendChild(listItem);
+        });
+
+        details.appendChild(list);
+        sidebar.appendChild(details);
+      });
+    }
+
+    function filterSidebar(query) {
+      const normalized = query.trim().toLowerCase();
+      const matchingDocs = normalized
+        ? docs.filter((doc) => doc.title.toLowerCase().includes(normalized))
+        : docs;
+
+      buildSidebar(matchingDocs);
+
+      if (matchingDocs.length) {
+        matchingDocs.forEach((doc) => {
+          if (doc.slug === location.hash.replace('#', '')) {
+            setActiveLink(doc.slug);
+          }
+        });
+      }
+    }
+
+    function findDocBySlug(slug) {
+      return docs.find((doc) => doc.slug === slug) || docs[0];
+    }
+
+    function setLanguage(lang, { persist = true, updateUrl = true } = {}) {
+      if (!dataFiles[lang]) {
+        return;
+      }
+      activeLanguage = lang;
+      const ui = getUiCopy();
+      document.documentElement.lang = lang;
+      document.title = ui.pageTitle;
+      headerTitle.textContent = ui.headerTitle;
+      homeLink.textContent = ui.backHome;
+      searchInput.placeholder = ui.searchPlaceholder;
+      searchInput.setAttribute('aria-label', ui.searchPlaceholder);
+      languageLabel.textContent = ui.languageLabel;
+      languageSelect.value = lang;
+
+      if (persist) {
+        localStorage.setItem('cookbookLanguage', lang);
+      }
+      if (updateUrl) {
+        const url = new URL(window.location.href);
+        url.searchParams.set('lang', lang);
+        history.replaceState(null, '', `${url.pathname}${url.search}${url.hash}`);
+      }
+    }
+
+    function getInitialLanguage() {
+      const params = new URLSearchParams(window.location.search);
+      const fromQuery = params.get('lang');
+      if (fromQuery && dataFiles[fromQuery]) {
+        return fromQuery;
+      }
+      const stored = localStorage.getItem('cookbookLanguage');
+      if (stored && dataFiles[stored]) {
+        return stored;
+      }
+      if (navigator.language && navigator.language.toLowerCase().startsWith('es')) {
+        return 'es';
+      }
+      return 'en';
+    }
+
+    function loadCookbookData({ keepSlug = true } = {}) {
+      const ui = getUiCopy();
+      const dataUrl = dataFiles[activeLanguage] || dataFiles.en;
+      content.innerHTML = `<h1>${ui.loadingTitle}</h1><p>${ui.loadingText}</p>`;
+      fetch(dataUrl)
+        .then((res) => res.json())
+        .then((data) => {
+          docs = data;
+          filterSidebar(searchInput.value);
+          const requestedSlug = keepSlug ? location.hash.replace('#', '') : '';
+          const initialDoc = findDocBySlug(requestedSlug);
+          loadDoc(initialDoc);
+        })
+        .catch(() => {
+          content.innerHTML = `<h1>${ui.dataLoadErrorTitle}</h1><p>${ui.dataLoadErrorText}</p>`;
+        });
+    }
+
+    activeLanguage = getInitialLanguage();
+    setLanguage(activeLanguage, { persist: false, updateUrl: true });
+    loadCookbookData();
+
+    window.addEventListener('hashchange', () => {
+      const slug = location.hash.replace('#', '');
+      loadDoc(findDocBySlug(slug));
+    });
+
+    searchInput.addEventListener('input', (event) => {
+      filterSidebar(event.target.value);
+    });
+
+    languageSelect.addEventListener('change', (event) => {
+      const nextLang = event.target.value;
+      if (nextLang === activeLanguage) {
+        return;
+      }
+      setLanguage(nextLang, { persist: true, updateUrl: true });
+      loadCookbookData({ keepSlug: true });
+    });
+  </script>
+</body>
+</html>
