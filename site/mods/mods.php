@@ -79,13 +79,13 @@
             <span class="grad-text" data-i18n="mods.heroHighlight">ALE Psych</span>
           </h1>
           <div class="hero-actions">
-            <a class="btn-primary" href="../downloads.html">
+            <a class="btn-primary" href="../downloads.php">
               <span data-i18n="mods.primaryCta">Descarga ALE Psych</span>
               <span class="btn-icon" aria-hidden="true">
                 <img src="../assets/svgs/download.svg" alt="" aria-hidden="true" />
               </span>
             </a>
-            <a class="btn-ghost" href="../../index.html">
+            <a class="btn-ghost" href="../../index.php">
               <span data-i18n="mods.secondaryCta">Página Principal</span>
               <span class="btn-icon" aria-hidden="true">
                 <img src="../assets/svgs/arrow-right.svg" alt="" aria-hidden="true" />
@@ -283,7 +283,7 @@
             <div class="status ${mod.comingSoon ? 'coming' : ''}">
               ${mod.comingSoon ? getText('mods.statusComing') : getText('mods.statusAvailable')}
             </div>
-            <a class="btn-primary mods-link" href="./mod-details.html?id=${encodeURIComponent(
+            <a class="btn-primary mods-link" href="./mod-details.php?id=${encodeURIComponent(
               mod.id
             )}">${getText('mods.viewDetails')}</a>
           `;

@@ -84,13 +84,13 @@
           </p>
 
           <div class="hero-actions">
-            <a class="btn-primary" href="./site/downloads.html">
+            <a class="btn-primary" href="./site/downloads.php">
               <span data-i18n="home.primaryCta">Primeros Pasos</span>
               <span class="btn-icon" aria-hidden="true">
                 <img src="./site/assets/svgs/arrow-right.svg" alt="" aria-hidden="true" />
               </span>
             </a>
-            <a class="btn-ghost" href="./site/cookbook/index.html">
+            <a class="btn-ghost" href="./site/cookbook/index.php">
               <span data-i18n="home.secondaryCta">Documentación</span>
               <span class="btn-icon" aria-hidden="true">
                 <img src="./site/assets/svgs/book.svg" alt="" aria-hidden="true" />
@@ -199,13 +199,13 @@
           </div>
 
           <div class="cta-actions">
-            <a class="btn-primary" href="./site/downloads.html">
+            <a class="btn-primary" href="./site/downloads.php">
               <span data-i18n="home.ctaPrimary">Primeros Pasos</span>
               <span class="btn-icon" aria-hidden="true">
                 <img src="./site/assets/svgs/arrow-right.svg" alt="" aria-hidden="true" />
               </span>
             </a>
-            <a class="btn-ghost" href="./site/cookbook/index.html">
+            <a class="btn-ghost" href="./site/cookbook/index.php">
               <span data-i18n="home.ctaSecondary">Documentación</span>
               <span class="btn-icon" aria-hidden="true">
                 <img src="./site/assets/svgs/book.svg" alt="" aria-hidden="true" />

@@ -729,7 +729,7 @@
             <option value="es">Español</option>
           </select>
         </div>
-        <a class="header-home" href="../../index.html">Back to homepage</a>
+        <a class="header-home" href="../../index.php">Back to homepage</a>
       </div>
     </div>
   </header>
@@ -855,8 +855,8 @@
     };
 
     const COOKBOOK_META = {
-      siteBaseUrl: window.ALEPsychMeta?.siteBaseUrl ?? 'https://ale-psych-crew.github.io',
-      defaultImage: 'https://ale-psych-crew.github.io/site/assets/images/engine-branding/cookbookmetaimage.png',
+      siteBaseUrl: window.ALEPsychMeta?.siteBaseUrl ?? 'https://alepsych.gamer.gd',
+      defaultImage: 'https://alepsych.gamer.gd/site/assets/images/engine-branding/cookbookmetaimage.png',
       themeColor: '#f28b3c',
     };
 
