@@ -1,17 +1,33 @@
-- name: Deploy to FTP (/htdocs)
-  uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-  with:
-    server: ${{ secrets.FTP_HOSTNAME }}
-    username: ${{ secrets.FTP_USERNAME }}
-    password: ${{ secrets.FTP_PASSWORD }}
-    port: ${{ secrets.FTP_PORT }}
-    protocol: ftp
+name: Deploy to FTP (/htdocs)
 
-    local-dir: site/
-    server-dir: /htdocs/
+on:
+  push:
+    branches: [ "main" ]
 
-    exclude: |
-      **/.git*
-      **/.github/**
-      **/node_modules/**
-      **/.DS_Store
+concurrency:
+  group: deploy-main
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy to FTP (/htdocs)
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_HOSTNAME }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: ${{ secrets.FTP_PORT }}
+          protocol: ftp
+          local-dir: site/
+          server-dir: /htdocs/
+          exclude: |
+            **/.git*
+            **/.github/**
+            **/node_modules/**
+            **/.DS_Store
+            **/*.log
