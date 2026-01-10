@@ -1,15 +1,15 @@
 export const NAV_SECTIONS = {
   en: [
-    { label: "Home", href: "/index.html" },
-    { label: "Downloads", href: "/site/downloads.html" },
-    { label: "Mods", href: "/site/mods/mods.html" },
-    { label: "Documentation", href: "/site/cookbook/index.html" },
+    { label: "Home", href: "/index.php" },
+    { label: "Downloads", href: "/site/downloads.php" },
+    { label: "Mods", href: "/site/mods/mods.php" },
+    { label: "Documentation", href: "/site/cookbook/index.php" },
   ],
   es: [
-    { label: "Inicio", href: "/index.html" },
-    { label: "Descargas", href: "/site/downloads.html" },
-    { label: "Mods", href: "/site/mods/mods.html" },
-    { label: "Documentación", href: "/site/cookbook/index.html" },
+    { label: "Inicio", href: "/index.php" },
+    { label: "Descargas", href: "/site/downloads.php" },
+    { label: "Mods", href: "/site/mods/mods.php" },
+    { label: "Documentación", href: "/site/cookbook/index.php" },
   ],
 };
 

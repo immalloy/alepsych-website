@@ -74,7 +74,7 @@
       <section class="hero">
         <div class="hero-inner">
           <div class="hero-actions">
-            <a class="btn-ghost" href="./mods.html">
+            <a class="btn-ghost" href="./mods.php">
               <span data-i18n="mods.backToMods">Volver a mods</span>
               <span class="btn-icon" aria-hidden="true">
                 <img src="../assets/svgs/arrow-right.svg" alt="" aria-hidden="true" />
@@ -178,7 +178,7 @@
         return html;
       }
 
-      const SITE_BASE_URL = window.ALEPsychMeta?.siteBaseUrl ?? 'https://ale-psych-crew.github.io';
+      const SITE_BASE_URL = window.ALEPsychMeta?.siteBaseUrl ?? 'https://alepsych.gamer.gd';
       const DATA_PATH = './mods-data.json';
       const detailsRoot = document.getElementById('details-root');
       const getText = (key) => window.ALEPsychI18n?.getText(key) ?? key;

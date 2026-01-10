@@ -1,4 +1,4 @@
-const SITE_BASE_URL = "https://ale-psych-crew.github.io";
+const SITE_BASE_URL = "https://alepsych.gamer.gd";
 const SITE_NAME = "ALE Psych";
 const DEFAULTS = {
   main: {
@@ -242,7 +242,7 @@ const getPageMeta = () => {
   const bodyMeta = getBodyMeta();
   const jsonLdType = (() => {
     const path = window.location.pathname;
-    if (!path.includes("/site/") && (path === "/" || path.endsWith("/index.html"))) {
+    if (!path.includes("/site/") && (path === "/" || path.endsWith("/index.php"))) {
       return "WebSite";
     }
     return "WebPage";

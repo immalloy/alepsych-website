@@ -33,8 +33,8 @@ def resolve_path(base: Path, link: str) -> Path:
     return (base / link).resolve()
 
 
-def iter_html_files(root: Path) -> Iterable[Path]:
-    return root.rglob("*.html")
+def iter_page_files(root: Path) -> Iterable[Path]:
+    return [*root.rglob("*.html"), *root.rglob("*.php")]
 
 
 def iter_json_files(root: Path) -> Iterable[Path]:
@@ -126,8 +126,8 @@ def main() -> int:
     issues: list[str] = []
     include_cookbook = "--include-cookbook" in sys.argv
 
-    for html_path in iter_html_files(REPO_ROOT):
-        issues.extend(check_html_file(html_path))
+    for page_path in iter_page_files(REPO_ROOT):
+        issues.extend(check_html_file(page_path))
 
     issues.extend(check_json_files(SITE_ROOT, include_cookbook=include_cookbook))
 
