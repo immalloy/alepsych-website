@@ -71,8 +71,12 @@ const normalizePath = (pathname) => {
   if (normalized === "/index.php") return "/";
   if (normalized === "/index.html") return "/";
   if (normalized === "/site/downloads.php") return "/site/downloads";
+  if (normalized === "/site/downloads/index.php") return "/site/downloads";
   if (normalized === "/site/mods/mods.php") return "/site/mods";
+  if (normalized === "/site/mods/index.php") return "/site/mods";
+  if (normalized === "/site/mods/mod-details/index.php") return "/site/mods/mod-details";
   if (normalized === "/site/cookbook/index.php") return "/site/cookbook";
+  if (normalized === "/site/index.php") return "/";
   if (normalized.endsWith(".php")) {
     normalized = normalized.replace(/\.php$/, "");
   }
