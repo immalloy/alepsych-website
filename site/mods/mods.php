@@ -1,23 +1,22 @@
 <?php
 $defaultLang = 'es';
 require __DIR__ . '/../includes/bootstrap.php';
+$metaTitle = $pageLang === 'en' ? 'Mods' : 'Mods';
+$metaDescription = $pageLang === 'en'
+    ? 'Browse mods built with ALE Psych and filter by tags or status.'
+    : 'Explora mods creados con ALE Psych y filtra por etiquetas o estado.';
+$metaFullTitle = $metaTitle . ' | ALE Psych';
 ?>
 <!doctype html>
 <html lang="<?= htmlspecialchars($pageLang, ENT_QUOTES, 'UTF-8'); ?>">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Mods | ALE Psych</title>
-    <meta
-      name="description"
-      content="Explora mods creados con ALE Psych y filtra por etiquetas o estado."
-    />
+    <title><?= htmlspecialchars($metaFullTitle, ENT_QUOTES, 'UTF-8'); ?></title>
+    <meta name="description" content="<?= htmlspecialchars($metaDescription, ENT_QUOTES, 'UTF-8'); ?>" />
     <link rel="canonical" href="https://alepsych.gamer.gd/site/mods" />
-    <meta property="og:title" content="Mods | ALE Psych" />
-    <meta
-      property="og:description"
-      content="Explora mods creados con ALE Psych y filtra por etiquetas o estado."
-    />
+    <meta property="og:title" content="<?= htmlspecialchars($metaFullTitle, ENT_QUOTES, 'UTF-8'); ?>" />
+    <meta property="og:description" content="<?= htmlspecialchars($metaDescription, ENT_QUOTES, 'UTF-8'); ?>" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://alepsych.gamer.gd/site/mods" />
     <meta
@@ -31,20 +30,17 @@ require __DIR__ . '/../includes/bootstrap.php';
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Mods | ALE Psych" />
+    <meta property="og:image:alt" content="<?= htmlspecialchars($metaFullTitle, ENT_QUOTES, 'UTF-8'); ?>" />
     <meta property="og:site_name" content="ALE Psych" />
-    <meta property="og:locale" content="es" />
+    <meta property="og:locale" content="<?= htmlspecialchars($pageLang, ENT_QUOTES, 'UTF-8'); ?>" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Mods | ALE Psych" />
-    <meta
-      name="twitter:description"
-      content="Explora mods creados con ALE Psych y filtra por etiquetas o estado."
-    />
+    <meta name="twitter:title" content="<?= htmlspecialchars($metaFullTitle, ENT_QUOTES, 'UTF-8'); ?>" />
+    <meta name="twitter:description" content="<?= htmlspecialchars($metaDescription, ENT_QUOTES, 'UTF-8'); ?>" />
     <meta
       name="twitter:image"
       content="https://alepsych.gamer.gd/site/assets/images/engine-branding/mainsitemetaimage.png"
     />
-    <meta name="twitter:image:alt" content="Mods | ALE Psych" />
+    <meta name="twitter:image:alt" content="<?= htmlspecialchars($metaFullTitle, ENT_QUOTES, 'UTF-8'); ?>" />
     <meta name="twitter:url" content="https://alepsych.gamer.gd/site/mods" />
     <meta name="theme-color" content="#a78bfa" />
     <link rel="apple-touch-icon" sizes="180x180" href="/site/assets/icons/apple-touch-icon.png" />

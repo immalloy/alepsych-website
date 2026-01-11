@@ -1,23 +1,22 @@
 <?php
 $defaultLang = 'es';
 require __DIR__ . '/site/includes/bootstrap.php';
+$metaTitle = $pageLang === 'en' ? 'Home' : 'Inicio';
+$metaDescription = $pageLang === 'en'
+    ? "ALE Psych is a Friday Night Funkin' modding engine that lets you build mods fast without wrestling the source code."
+    : 'ALE Psych es un motor de modding de Friday Night Funkin\' que te permite crear mods rápido sin pelear con el código fuente.';
+$metaFullTitle = $metaTitle . ' | ALE Psych';
 ?>
 <!doctype html>
 <html lang="<?= htmlspecialchars($pageLang, ENT_QUOTES, 'UTF-8'); ?>">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>ALE Psych</title>
-    <meta
-      name="description"
-      content="ALE Psych es un motor de modding de Friday Night Funkin' que te permite crear mods rápido sin pelear con el código fuente."
-    />
+    <title><?= htmlspecialchars($metaFullTitle, ENT_QUOTES, 'UTF-8'); ?></title>
+    <meta name="description" content="<?= htmlspecialchars($metaDescription, ENT_QUOTES, 'UTF-8'); ?>" />
     <link rel="canonical" href="https://alepsych.gamer.gd/" />
-    <meta property="og:title" content="ALE Psych" />
-    <meta
-      property="og:description"
-      content="ALE Psych es un motor de modding de Friday Night Funkin' que te permite crear mods rápido sin pelear con el código fuente."
-    />
+    <meta property="og:title" content="<?= htmlspecialchars($metaFullTitle, ENT_QUOTES, 'UTF-8'); ?>" />
+    <meta property="og:description" content="<?= htmlspecialchars($metaDescription, ENT_QUOTES, 'UTF-8'); ?>" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://alepsych.gamer.gd/" />
     <meta
@@ -31,20 +30,17 @@ require __DIR__ . '/site/includes/bootstrap.php';
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="ALE Psych" />
+    <meta property="og:image:alt" content="<?= htmlspecialchars($metaFullTitle, ENT_QUOTES, 'UTF-8'); ?>" />
     <meta property="og:site_name" content="ALE Psych" />
-    <meta property="og:locale" content="es" />
+    <meta property="og:locale" content="<?= htmlspecialchars($pageLang, ENT_QUOTES, 'UTF-8'); ?>" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="ALE Psych" />
-    <meta
-      name="twitter:description"
-      content="ALE Psych es un motor de modding de Friday Night Funkin' que te permite crear mods rápido sin pelear con el código fuente."
-    />
+    <meta name="twitter:title" content="<?= htmlspecialchars($metaFullTitle, ENT_QUOTES, 'UTF-8'); ?>" />
+    <meta name="twitter:description" content="<?= htmlspecialchars($metaDescription, ENT_QUOTES, 'UTF-8'); ?>" />
     <meta
       name="twitter:image"
       content="https://alepsych.gamer.gd/site/assets/images/engine-branding/mainsitemetaimage.png"
     />
-    <meta name="twitter:image:alt" content="ALE Psych" />
+    <meta name="twitter:image:alt" content="<?= htmlspecialchars($metaFullTitle, ENT_QUOTES, 'UTF-8'); ?>" />
     <meta name="twitter:url" content="https://alepsych.gamer.gd/" />
     <meta name="theme-color" content="#a78bfa" />
     <link rel="apple-touch-icon" sizes="180x180" href="/site/assets/icons/apple-touch-icon.png" />
