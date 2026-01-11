@@ -1,13 +1,24 @@
 RewriteEngine On
-RewriteBase /
 
-# Redirect legacy .html URLs to their PHP equivalents when available
-RewriteCond %{REQUEST_URI} ^/(.+)\.html$ [NC]
-RewriteCond %{DOCUMENT_ROOT}/%1.php -f
-RewriteRule ^(.+)\.html$ /%1.php [R=301,L]
+# Redirect canonical extensionless URLs
+RewriteRule ^index\.php$ / [R=301,L]
+RewriteRule ^site/downloads\.php$ /site/downloads [R=301,L]
+RewriteRule ^site/mods/mods\.php$ /site/mods [R=301,L]
+RewriteRule ^site/mods/mod-details\.php$ /site/mods/mod-details [R=301,L]
+RewriteRule ^site/cookbook/index\.php$ /site/cookbook [R=301,L]
 
-# Allow clean URLs without extensions when a matching .php exists
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{DOCUMENT_ROOT}/$1.php -f
-RewriteRule ^(.+)$ $1.php [L]
+# Redirect other .php URLs to extensionless versions
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.php[\s?]
+RewriteRule ^ %1 [R=301,L]
+
+# Preserve existing files and directories
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Extensionless routes
+RewriteRule ^$ index.php [L]
+RewriteRule ^site/downloads/?$ site/downloads.php [L]
+RewriteRule ^site/mods/?$ site/mods/mods.php [L]
+RewriteRule ^site/mods/mod-details/?$ site/mods/mod-details.php [L]
+RewriteRule ^site/cookbook/?$ site/cookbook/index.php [L]

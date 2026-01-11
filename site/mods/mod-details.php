@@ -3,17 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>ALE Psych</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-16.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32.png" />
-    <link rel="icon" type="image/png" sizes="192x192" href="../assets/icons/favicon-192.png" />
-    <link rel="icon" type="image/png" sizes="512x512" href="../assets/icons/favicon-512.png" />
-    <link rel="manifest" href="../assets/icons/site.webmanifest" />
-    <link rel="stylesheet" href="../assets/css/base.css" />
-    <link rel="stylesheet" href="../assets/css/components.css" />
-    <link rel="stylesheet" href="../assets/css/mods.css" />
-    <script type="module" src="../assets/js/meta.js"></script>
+    <title>Detalles del Mod | ALE Psych</title>
+    <meta
+      name="description"
+      content="Revisa detalles, descargas y estado de los mods de la comunidad ALE Psych."
+    />
+    <link rel="canonical" href="https://alepsych.gamer.gd/site/mods/mod-details" />
+    <meta property="og:title" content="Detalles del Mod | ALE Psych" />
+    <meta
+      property="og:description"
+      content="Revisa detalles, descargas y estado de los mods de la comunidad ALE Psych."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://alepsych.gamer.gd/site/mods/mod-details" />
+    <meta
+      property="og:image"
+      content="https://alepsych.gamer.gd/site/assets/images/engine-branding/mainsitemetaimage.png"
+    />
+    <meta
+      property="og:image:secure_url"
+      content="https://alepsych.gamer.gd/site/assets/images/engine-branding/mainsitemetaimage.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Detalles del Mod | ALE Psych" />
+    <meta property="og:site_name" content="ALE Psych" />
+    <meta property="og:locale" content="es" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Detalles del Mod | ALE Psych" />
+    <meta
+      name="twitter:description"
+      content="Revisa detalles, descargas y estado de los mods de la comunidad ALE Psych."
+    />
+    <meta
+      name="twitter:image"
+      content="https://alepsych.gamer.gd/site/assets/images/engine-branding/mainsitemetaimage.png"
+    />
+    <meta name="twitter:image:alt" content="Detalles del Mod | ALE Psych" />
+    <meta name="twitter:url" content="https://alepsych.gamer.gd/site/mods/mod-details" />
+    <meta name="theme-color" content="#a78bfa" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/site/assets/icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/site/assets/icons/favicon-16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/site/assets/icons/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/site/assets/icons/favicon-192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/site/assets/icons/favicon-512.png" />
+    <link rel="manifest" href="/site/assets/icons/site.webmanifest" />
+    <link rel="stylesheet" href="/site/assets/css/base.css" />
+    <link rel="stylesheet" href="/site/assets/css/components.css" />
+    <link rel="stylesheet" href="/site/assets/css/mods.css" />
+    <script type="module" src="/site/assets/js/meta.js"></script>
   </head>
   <body
     data-meta-section="main"
@@ -39,13 +78,13 @@
       <div class="container topbar-inner">
         <div class="topbar-left">
           <button class="icon-btn" id="openSidebarBtn" aria-label="Toggle menu" type="button">
-            <img src="../assets/svgs/hamburger-menu.svg" alt="" aria-hidden="true" />
+            <img src="/site/assets/svgs/hamburger-menu.svg" alt="" aria-hidden="true" />
           </button>
 
           <div class="brand">
             <div class="brand-icon">
               <img
-                src="../assets/images/engine-branding/icon.png"
+                src="/site/assets/images/engine-branding/icon.png"
                 alt="ALE Psych icon"
                 draggable="false"
               />
@@ -74,10 +113,10 @@
       <section class="hero">
         <div class="hero-inner">
           <div class="hero-actions">
-            <a class="btn-ghost" href="./mods.php">
+            <a class="btn-ghost" href="/site/mods">
               <span data-i18n="mods.backToMods">Volver a mods</span>
               <span class="btn-icon" aria-hidden="true">
-                <img src="../assets/svgs/arrow-right.svg" alt="" aria-hidden="true" />
+                <img src="/site/assets/svgs/arrow-right.svg" alt="" aria-hidden="true" />
               </span>
             </a>
           </div>
@@ -114,7 +153,7 @@
         <div class="sidebar-brand">
           <div class="brand-icon">
             <img
-              src="../assets/images/engine-branding/icon.png"
+              src="/site/assets/images/engine-branding/icon.png"
               alt="ALE Psych icon"
               draggable="false"
             />
@@ -126,7 +165,7 @@
         </div>
 
         <button class="icon-btn" id="closeSidebarBtn" aria-label="Close" type="button">
-          <img src="../assets/svgs/arrow-circle-left.svg" alt="" aria-hidden="true" />
+          <img src="/site/assets/svgs/arrow-circle-left.svg" alt="" aria-hidden="true" />
         </button>
       </div>
 
@@ -136,7 +175,7 @@
       </div>
     </aside>
 
-    <script type="module" src="../assets/js/main.js"></script>
+    <script type="module" src="/site/assets/js/main.js"></script>
     <script type="module">
       // Inline markdown parser (simple, self-contained)
       function parseMarkdown(markdown) {
@@ -179,7 +218,8 @@
       }
 
       const SITE_BASE_URL = window.ALEPsychMeta?.siteBaseUrl ?? 'https://alepsych.gamer.gd';
-      const DATA_PATH = './mods-data.json';
+      const DATA_PATH = '/site/mods/mods-data.json';
+      const dataUrl = new URL(DATA_PATH, window.location.origin);
       const detailsRoot = document.getElementById('details-root');
       const getText = (key) => window.ALEPsychI18n?.getText(key) ?? key;
       const getTagLabel = (tag) => window.ALEPsychI18n?.getTagLabel(tag) ?? tag;
@@ -204,11 +244,10 @@
 
       function updateModMetadata(mod, markdownText) {
         if (!mod) return;
-        const canonicalUrl = new URL(
-          `${window.location.pathname}${window.location.search}`,
-          SITE_BASE_URL
-        ).toString();
-        const imageUrl = new URL(mod.thumbnail, window.location.href).toString();
+        const canonicalUrl =
+          window.ALEPsychMeta?.buildCanonicalUrl?.() ??
+          new URL(`${window.location.pathname}${window.location.search}`, SITE_BASE_URL).toString();
+        const imageUrl = new URL(mod.thumbnail, dataUrl).toString();
         const description = buildModDescription(mod, markdownText);
         window.ALEPsychMeta?.setOverrides({
           title: `${mod.title} | ALE Psych Mods`,
@@ -248,7 +287,7 @@
             <div class="mod-details-hero">
               <div class="media-frame">
                 <div class="aspect-video">
-                  <img src="${mod.thumbnail}" alt="${mod.title} thumbnail" loading="lazy" />
+                  <img src="${new URL(mod.thumbnail, dataUrl)}" alt="${mod.title} thumbnail" loading="lazy" />
                 </div>
               </div>
               <div class="mod-details-info">
@@ -285,7 +324,7 @@
           return;
         }
 
-        const markdownResponse = await fetch(mod.markdown);
+        const markdownResponse = await fetch(new URL(mod.markdown, dataUrl));
         const markdownText = await markdownResponse.text();
         const descriptionHtml = parseMarkdown(markdownText);
 

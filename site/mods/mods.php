@@ -3,17 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>ALE Psych</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-16.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32.png" />
-    <link rel="icon" type="image/png" sizes="192x192" href="../assets/icons/favicon-192.png" />
-    <link rel="icon" type="image/png" sizes="512x512" href="../assets/icons/favicon-512.png" />
-    <link rel="manifest" href="../assets/icons/site.webmanifest" />
-    <link rel="stylesheet" href="../assets/css/base.css" />
-    <link rel="stylesheet" href="../assets/css/components.css" />
-    <link rel="stylesheet" href="../assets/css/mods.css" />
-    <script type="module" src="../assets/js/meta.js"></script>
+    <title>Mods | ALE Psych</title>
+    <meta
+      name="description"
+      content="Explora mods creados con ALE Psych y filtra por etiquetas o estado."
+    />
+    <link rel="canonical" href="https://alepsych.gamer.gd/site/mods" />
+    <meta property="og:title" content="Mods | ALE Psych" />
+    <meta
+      property="og:description"
+      content="Explora mods creados con ALE Psych y filtra por etiquetas o estado."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://alepsych.gamer.gd/site/mods" />
+    <meta
+      property="og:image"
+      content="https://alepsych.gamer.gd/site/assets/images/engine-branding/mainsitemetaimage.png"
+    />
+    <meta
+      property="og:image:secure_url"
+      content="https://alepsych.gamer.gd/site/assets/images/engine-branding/mainsitemetaimage.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Mods | ALE Psych" />
+    <meta property="og:site_name" content="ALE Psych" />
+    <meta property="og:locale" content="es" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Mods | ALE Psych" />
+    <meta
+      name="twitter:description"
+      content="Explora mods creados con ALE Psych y filtra por etiquetas o estado."
+    />
+    <meta
+      name="twitter:image"
+      content="https://alepsych.gamer.gd/site/assets/images/engine-branding/mainsitemetaimage.png"
+    />
+    <meta name="twitter:image:alt" content="Mods | ALE Psych" />
+    <meta name="twitter:url" content="https://alepsych.gamer.gd/site/mods" />
+    <meta name="theme-color" content="#a78bfa" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/site/assets/icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/site/assets/icons/favicon-16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/site/assets/icons/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/site/assets/icons/favicon-192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/site/assets/icons/favicon-512.png" />
+    <link rel="manifest" href="/site/assets/icons/site.webmanifest" />
+    <link rel="stylesheet" href="/site/assets/css/base.css" />
+    <link rel="stylesheet" href="/site/assets/css/components.css" />
+    <link rel="stylesheet" href="/site/assets/css/mods.css" />
+    <script type="module" src="/site/assets/js/meta.js"></script>
   </head>
   <body
     class="performance-lite"
@@ -40,13 +79,13 @@
       <div class="container topbar-inner">
         <div class="topbar-left">
           <button class="icon-btn" id="openSidebarBtn" aria-label="Toggle menu" type="button">
-            <img src="../assets/svgs/hamburger-menu.svg" alt="" aria-hidden="true" />
+            <img src="/site/assets/svgs/hamburger-menu.svg" alt="" aria-hidden="true" />
           </button>
 
           <div class="brand">
             <div class="brand-icon">
               <img
-                src="../assets/images/engine-branding/icon.png"
+                src="/site/assets/images/engine-branding/icon.png"
                 alt="ALE Psych icon"
                 draggable="false"
               />
@@ -79,16 +118,16 @@
             <span class="grad-text" data-i18n="mods.heroHighlight">ALE Psych</span>
           </h1>
           <div class="hero-actions">
-            <a class="btn-primary" href="../downloads.php">
+            <a class="btn-primary" href="/site/downloads">
               <span data-i18n="mods.primaryCta">Descarga ALE Psych</span>
               <span class="btn-icon" aria-hidden="true">
-                <img src="../assets/svgs/download.svg" alt="" aria-hidden="true" />
+                <img src="/site/assets/svgs/download.svg" alt="" aria-hidden="true" />
               </span>
             </a>
-            <a class="btn-ghost" href="../../index.php">
+            <a class="btn-ghost" href="/">
               <span data-i18n="mods.secondaryCta">Página Principal</span>
               <span class="btn-icon" aria-hidden="true">
-                <img src="../assets/svgs/arrow-right.svg" alt="" aria-hidden="true" />
+                <img src="/site/assets/svgs/arrow-right.svg" alt="" aria-hidden="true" />
               </span>
             </a>
           </div>
@@ -157,7 +196,7 @@
         <div class="sidebar-brand">
           <div class="brand-icon">
             <img
-              src="../assets/images/engine-branding/icon.png"
+              src="/site/assets/images/engine-branding/icon.png"
               alt="ALE Psych icon"
               draggable="false"
             />
@@ -169,7 +208,7 @@
         </div>
 
         <button class="icon-btn" id="closeSidebarBtn" aria-label="Close" type="button">
-          <img src="../assets/svgs/arrow-circle-left.svg" alt="" aria-hidden="true" />
+          <img src="/site/assets/svgs/arrow-circle-left.svg" alt="" aria-hidden="true" />
         </button>
       </div>
 
@@ -179,10 +218,10 @@
       </div>
     </aside>
 
-    <script type="module" src="../assets/js/main.js"></script>
+    <script type="module" src="/site/assets/js/main.js"></script>
     <script type="module">
       // Path references so the system remains easy to relocate
-      const DATA_PATH = './mods-data.json';
+      const DATA_PATH = '/site/mods/mods-data.json';
       const PAGE_SIZE = 10;
 
       const modsGrid = document.getElementById('mods-grid');
@@ -273,7 +312,7 @@
 
           card.innerHTML = `
             <div class="mod-thumb">
-              <img src="${mod.thumbnail}" alt="${mod.title} thumbnail" loading="lazy" />
+              <img src="${new URL(mod.thumbnail, new URL(DATA_PATH, window.location.origin))}" alt="${mod.title} thumbnail" loading="lazy" />
             </div>
             <div class="mod-title">${mod.title}</div>
             <div class="mod-meta">${getText('mods.byLabel')} ${mod.author}</div>
@@ -283,7 +322,7 @@
             <div class="status ${mod.comingSoon ? 'coming' : ''}">
               ${mod.comingSoon ? getText('mods.statusComing') : getText('mods.statusAvailable')}
             </div>
-            <a class="btn-primary mods-link" href="./mod-details.php?id=${encodeURIComponent(
+            <a class="btn-primary mods-link" href="/site/mods/mod-details?id=${encodeURIComponent(
               mod.id
             )}">${getText('mods.viewDetails')}</a>
           `;

@@ -4,6 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>ALE Psych</title>
+    <meta
+      name="description"
+      content="ALE Psych es un motor de modding de Friday Night Funkin' que te permite crear mods rápido sin pelear con el código fuente."
+    />
+    <link rel="canonical" href="https://alepsych.gamer.gd/" />
+    <meta property="og:title" content="ALE Psych" />
+    <meta
+      property="og:description"
+      content="ALE Psych es un motor de modding de Friday Night Funkin' que te permite crear mods rápido sin pelear con el código fuente."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://alepsych.gamer.gd/" />
+    <meta
+      property="og:image"
+      content="https://alepsych.gamer.gd/site/assets/images/engine-branding/mainsitemetaimage.png"
+    />
+    <meta
+      property="og:image:secure_url"
+      content="https://alepsych.gamer.gd/site/assets/images/engine-branding/mainsitemetaimage.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="ALE Psych" />
+    <meta property="og:site_name" content="ALE Psych" />
+    <meta property="og:locale" content="es" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ALE Psych" />
+    <meta
+      name="twitter:description"
+      content="ALE Psych es un motor de modding de Friday Night Funkin' que te permite crear mods rápido sin pelear con el código fuente."
+    />
+    <meta
+      name="twitter:image"
+      content="https://alepsych.gamer.gd/site/assets/images/engine-branding/mainsitemetaimage.png"
+    />
+    <meta name="twitter:image:alt" content="ALE Psych" />
+    <meta name="twitter:url" content="https://alepsych.gamer.gd/" />
+    <meta name="theme-color" content="#a78bfa" />
     <link rel="apple-touch-icon" sizes="180x180" href="./site/assets/icons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="./site/assets/icons/favicon-16.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="./site/assets/icons/favicon-32.png" />
@@ -84,13 +123,13 @@
           </p>
 
           <div class="hero-actions">
-            <a class="btn-primary" href="./site/downloads.php">
+            <a class="btn-primary" href="/site/downloads">
               <span data-i18n="home.primaryCta">Primeros Pasos</span>
               <span class="btn-icon" aria-hidden="true">
                 <img src="./site/assets/svgs/arrow-right.svg" alt="" aria-hidden="true" />
               </span>
             </a>
-            <a class="btn-ghost" href="./site/cookbook/index.php">
+            <a class="btn-ghost" href="/site/cookbook">
               <span data-i18n="home.secondaryCta">Documentación</span>
               <span class="btn-icon" aria-hidden="true">
                 <img src="./site/assets/svgs/book.svg" alt="" aria-hidden="true" />
@@ -128,9 +167,9 @@
 
           <div class="why-content" id="whyContent">
             <div class="why-main">
-              <div class="why-title" id="whyTitle">Ease of Use</div>
+              <div class="why-title" id="whyTitle">Facilidad de Uso</div>
               <p class="why-text" id="whyText">
-                You shouldn’t need a tutorial marathon to start charting. ALE Psych stays out of your way and lets you build.
+                No necesitas montones de Tutoriales para empezar. ¡ALE Psych simplifica varias cosas a los principiantes!
               </p>
             </div>
           </div>
@@ -177,11 +216,13 @@
             <div class="preview-info">
               <div class="pill">
                 <span class="dot dot-violet"></span>
-                <span id="prevCount">1 / 4</span>
+                <span id="prevCount">1 / 3</span>
               </div>
 
-              <div class="preview-title" id="prevTitle">Ingame console</div>
-              <p class="preview-desc" id="prevDesc">Debug faster with an in-game console overlay.</p>
+              <div class="preview-title" id="prevTitle">Menús y Sub-menús en Scripts</div>
+              <p class="preview-desc" id="prevDesc">
+                Sin complicaciones con el código fuente y flujo de trabajo infinitamente más rápido.
+              </p>
 
               <div class="chips" id="prevChips"></div>
             </div>
@@ -199,13 +240,13 @@
           </div>
 
           <div class="cta-actions">
-            <a class="btn-primary" href="./site/downloads.php">
+            <a class="btn-primary" href="/site/downloads">
               <span data-i18n="home.ctaPrimary">Primeros Pasos</span>
               <span class="btn-icon" aria-hidden="true">
                 <img src="./site/assets/svgs/arrow-right.svg" alt="" aria-hidden="true" />
               </span>
             </a>
-            <a class="btn-ghost" href="./site/cookbook/index.php">
+            <a class="btn-ghost" href="/site/cookbook">
               <span data-i18n="home.ctaSecondary">Documentación</span>
               <span class="btn-icon" aria-hidden="true">
                 <img src="./site/assets/svgs/book.svg" alt="" aria-hidden="true" />

@@ -3,13 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ALE Psych</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/cookbook/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/cookbook/favicon-32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/cookbook/favicon-16.png" />
-  <link rel="icon" type="image/png" sizes="192x192" href="../assets/icons/cookbook/favicon-192.png" />
-  <link rel="icon" type="image/png" sizes="512x512" href="../assets/icons/cookbook/favicon-512.png" />
-  <script type="module" src="../assets/js/meta.js"></script>
+  <title>ALE Psych Engine Cookbook | ALE Psych</title>
+  <meta name="description" content="Documentation for ALE Psych Engine." />
+  <link rel="canonical" href="https://alepsych.gamer.gd/site/cookbook" />
+  <meta property="og:title" content="ALE Psych Engine Cookbook | ALE Psych" />
+  <meta property="og:description" content="Documentation for ALE Psych Engine." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://alepsych.gamer.gd/site/cookbook" />
+  <meta
+    property="og:image"
+    content="https://alepsych.gamer.gd/site/assets/images/engine-branding/cookbookmetaimage.png"
+  />
+  <meta
+    property="og:image:secure_url"
+    content="https://alepsych.gamer.gd/site/assets/images/engine-branding/cookbookmetaimage.png"
+  />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1920" />
+  <meta property="og:image:height" content="1080" />
+  <meta property="og:image:alt" content="ALE Psych Engine Cookbook | ALE Psych" />
+  <meta property="og:site_name" content="ALE Psych" />
+  <meta property="og:locale" content="en" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ALE Psych Engine Cookbook | ALE Psych" />
+  <meta name="twitter:description" content="Documentation for ALE Psych Engine." />
+  <meta
+    name="twitter:image"
+    content="https://alepsych.gamer.gd/site/assets/images/engine-branding/cookbookmetaimage.png"
+  />
+  <meta name="twitter:image:alt" content="ALE Psych Engine Cookbook | ALE Psych" />
+  <meta name="twitter:url" content="https://alepsych.gamer.gd/site/cookbook" />
+  <meta name="theme-color" content="#f28b3c" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/site/assets/icons/cookbook/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/site/assets/icons/cookbook/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/site/assets/icons/cookbook/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/site/assets/icons/cookbook/favicon-192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="/site/assets/icons/cookbook/favicon-512.png" />
+  <script type="module" src="/site/assets/js/meta.js"></script>
   <style>
     :root {
       color-scheme: dark;
@@ -702,7 +732,7 @@
           Menu
         </button>
         <div class="brand-icon">
-          <img src="../assets/icons/cookbook/favicon-512.png" alt="Cookbook icon" />
+          <img src="/site/assets/icons/cookbook/favicon-512.png" alt="Cookbook icon" />
         </div>
         <div class="brand-text">
           <div class="brand-title" id="site-title">ALE Psych Engine Cookbook</div>
@@ -729,7 +759,7 @@
             <option value="es">Español</option>
           </select>
         </div>
-        <a class="header-home" href="../../index.php">Back to homepage</a>
+        <a class="header-home" href="/">Back to homepage</a>
       </div>
     </div>
   </header>

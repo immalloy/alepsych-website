@@ -8,9 +8,9 @@ const SUPPORTED_LANGS = ["es", "en"];
 
 const { pathname } = window.location;
 const isRootIndex = !pathname.includes("/site/") && (pathname === "/" || pathname.endsWith("/index.php"));
-const isModsPage = pathname.includes("/site/mods/");
+const isModsPage = pathname.startsWith("/site/mods");
 const siteRoot = isRootIndex ? "site" : isModsPage ? ".." : ".";
-const assetRoot = siteRoot === "." ? "./assets" : `${siteRoot}/assets`;
+const assetRoot = "/site/assets";
 const resolveHref = (href) => {
   if (href.startsWith("/") || href.startsWith("http")) return href;
   return siteRoot === "." ? `./${href}` : `${siteRoot}/${href}`;

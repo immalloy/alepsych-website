@@ -66,9 +66,25 @@ const toAbsoluteUrl = (value) => {
   }
 };
 
+const normalizePath = (pathname) => {
+  let normalized = pathname;
+  if (normalized === "/index.php") return "/";
+  if (normalized === "/site/downloads.php") return "/site/downloads";
+  if (normalized === "/site/mods/mods.php") return "/site/mods";
+  if (normalized === "/site/cookbook/index.php") return "/site/cookbook";
+  if (normalized.endsWith(".php")) {
+    normalized = normalized.replace(/\.php$/, "");
+  }
+  if (normalized.length > 1 && normalized.endsWith("/")) {
+    normalized = normalized.replace(/\/+$/, "");
+  }
+  return normalized;
+};
+
 const buildCanonicalUrl = ({ includeHash = false } = {}) => {
   const current = new URL(window.location.href);
-  const path = `${current.pathname}${current.search}${includeHash ? current.hash : ""}`;
+  const normalizedPath = normalizePath(current.pathname);
+  const path = `${normalizedPath}${current.search}${includeHash ? current.hash : ""}`;
   return new URL(path, SITE_BASE_URL).toString();
 };
 

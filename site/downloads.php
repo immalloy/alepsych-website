@@ -3,7 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>ALE Psych</title>
+    <title>Descargas | ALE Psych</title>
+    <meta
+      name="description"
+      content="Obtén las últimas builds de ALE Psych para Windows, macOS, Linux, Android e iOS."
+    />
+    <link rel="canonical" href="https://alepsych.gamer.gd/site/downloads" />
+    <meta property="og:title" content="Descargas | ALE Psych" />
+    <meta
+      property="og:description"
+      content="Obtén las últimas builds de ALE Psych para Windows, macOS, Linux, Android e iOS."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://alepsych.gamer.gd/site/downloads" />
+    <meta
+      property="og:image"
+      content="https://alepsych.gamer.gd/site/assets/images/engine-branding/mainsitemetaimage.png"
+    />
+    <meta
+      property="og:image:secure_url"
+      content="https://alepsych.gamer.gd/site/assets/images/engine-branding/mainsitemetaimage.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Descargas | ALE Psych" />
+    <meta property="og:site_name" content="ALE Psych" />
+    <meta property="og:locale" content="es" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Descargas | ALE Psych" />
+    <meta
+      name="twitter:description"
+      content="Obtén las últimas builds de ALE Psych para Windows, macOS, Linux, Android e iOS."
+    />
+    <meta
+      name="twitter:image"
+      content="https://alepsych.gamer.gd/site/assets/images/engine-branding/mainsitemetaimage.png"
+    />
+    <meta name="twitter:image:alt" content="Descargas | ALE Psych" />
+    <meta name="twitter:url" content="https://alepsych.gamer.gd/site/downloads" />
+    <meta name="theme-color" content="#a78bfa" />
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32.png" />
