@@ -1,5 +1,9 @@
+<?php
+$defaultLang = 'es';
+require __DIR__ . '/includes/bootstrap.php';
+?>
 <!doctype html>
-<html lang="es">
+<html lang="<?= htmlspecialchars($pageLang, ENT_QUOTES, 'UTF-8'); ?>">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -43,15 +47,15 @@
     <meta name="twitter:image:alt" content="Descargas | ALE Psych" />
     <meta name="twitter:url" content="https://alepsych.gamer.gd/site/downloads" />
     <meta name="theme-color" content="#a78bfa" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32.png" />
-    <link rel="icon" type="image/png" sizes="192x192" href="./assets/icons/favicon-192.png" />
-    <link rel="icon" type="image/png" sizes="512x512" href="./assets/icons/favicon-512.png" />
-    <link rel="manifest" href="./assets/icons/site.webmanifest" />
-    <link rel="stylesheet" href="./assets/css/base.css" />
-    <link rel="stylesheet" href="./assets/css/components.css" />
-    <script type="module" src="./assets/js/meta.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/site/assets/icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/site/assets/icons/favicon-16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/site/assets/icons/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/site/assets/icons/favicon-192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/site/assets/icons/favicon-512.png" />
+    <link rel="manifest" href="/site/assets/icons/site.webmanifest" />
+    <link rel="stylesheet" href="/site/assets/css/base.css" />
+    <link rel="stylesheet" href="/site/assets/css/components.css" />
+    <script type="module" src="/site/assets/js/meta.js"></script>
   </head>
   <body
     class="performance-lite"
@@ -78,13 +82,13 @@
       <div class="container topbar-inner">
         <div class="topbar-left">
           <button class="icon-btn" id="openSidebarBtn" aria-label="Toggle menu" type="button">
-            <img src="./assets/svgs/hamburger-menu.svg" alt="" aria-hidden="true" />
+            <img src="/site/assets/svgs/hamburger-menu.svg" alt="" aria-hidden="true" />
           </button>
 
           <div class="brand">
             <div class="brand-icon">
               <img
-                src="./assets/images/engine-branding/icon.png"
+                src="/site/assets/images/engine-branding/icon.png"
                 alt="ALE Psych icon"
                 draggable="false"
               />
@@ -129,7 +133,7 @@
             >
               <span data-i18n="downloads.githubButton">GitHub Releases</span>
               <span class="btn-icon" aria-hidden="true">
-                <img src="./assets/svgs/github.svg" alt="" aria-hidden="true" />
+                <img src="/site/assets/svgs/github.svg" alt="" aria-hidden="true" />
               </span>
             </a>
           </div>
@@ -149,7 +153,7 @@
           <article class="download-card">
             <div class="download-card-header">
               <div class="download-icon">
-                <img src="./assets/svgs/os-windows.svg" alt="" aria-hidden="true" />
+                <img src="/site/assets/svgs/os-windows.svg" alt="" aria-hidden="true" />
               </div>
               <div>
                 <div class="download-title" data-i18n="downloads.cards.windows64.title">Windows 64-bit</div>
@@ -168,7 +172,7 @@
               >
                 <span data-i18n="downloads.cards.windows64.button">Descargar Windows 64-bit</span>
                 <span class="btn-icon" aria-hidden="true">
-                  <img src="./assets/svgs/download.svg" alt="" aria-hidden="true" />
+                  <img src="/site/assets/svgs/download.svg" alt="" aria-hidden="true" />
                 </span>
               </a>
             </div>
@@ -177,7 +181,7 @@
           <article class="download-card">
             <div class="download-card-header">
               <div class="download-icon">
-                <img src="./assets/svgs/os-windows.svg" alt="" aria-hidden="true" />
+                <img src="/site/assets/svgs/os-windows.svg" alt="" aria-hidden="true" />
               </div>
               <div>
                 <div class="download-title" data-i18n="downloads.cards.windows32.title">Windows 32-bit</div>
@@ -198,7 +202,7 @@
               >
                 <span data-i18n="downloads.cards.windows32.button">Descargar Windows 32-bit</span>
                 <span class="btn-icon" aria-hidden="true">
-                  <img src="./assets/svgs/download.svg" alt="" aria-hidden="true" />
+                  <img src="/site/assets/svgs/download.svg" alt="" aria-hidden="true" />
                 </span>
               </a>
             </div>
@@ -207,7 +211,7 @@
           <article class="download-card">
             <div class="download-card-header">
               <div class="download-icon">
-                <img src="./assets/svgs/os-android.svg" alt="" aria-hidden="true" />
+                <img src="/site/assets/svgs/os-android.svg" alt="" aria-hidden="true" />
               </div>
               <div>
                 <div class="download-title" data-i18n="downloads.cards.android.title">Android</div>
@@ -224,7 +228,7 @@
               >
                 <span data-i18n="downloads.cards.android.button">Descargar Android</span>
                 <span class="btn-icon" aria-hidden="true">
-                  <img src="./assets/svgs/download.svg" alt="" aria-hidden="true" />
+                  <img src="/site/assets/svgs/download.svg" alt="" aria-hidden="true" />
                 </span>
               </a>
             </div>
@@ -233,7 +237,7 @@
           <article class="download-card">
             <div class="download-card-header">
               <div class="download-icon">
-                <img src="./assets/svgs/os-apple.svg" alt="" aria-hidden="true" />
+                <img src="/site/assets/svgs/os-apple.svg" alt="" aria-hidden="true" />
               </div>
               <div>
                 <div class="download-title" data-i18n="downloads.cards.ios.title">iOS</div>
@@ -250,7 +254,7 @@
               >
                 <span data-i18n="downloads.cards.ios.button">Descargar iOS</span>
                 <span class="btn-icon" aria-hidden="true">
-                  <img src="./assets/svgs/download.svg" alt="" aria-hidden="true" />
+                  <img src="/site/assets/svgs/download.svg" alt="" aria-hidden="true" />
                 </span>
               </a>
             </div>
@@ -259,7 +263,7 @@
           <article class="download-card">
             <div class="download-card-header">
               <div class="download-icon">
-                <img src="./assets/svgs/os-apple.svg" alt="" aria-hidden="true" />
+                <img src="/site/assets/svgs/os-apple.svg" alt="" aria-hidden="true" />
               </div>
               <div>
                 <div class="download-title" data-i18n="downloads.cards.macos.title">macOS</div>
@@ -278,7 +282,7 @@
               >
                 <span data-i18n="downloads.cards.macos.button">Descargar macOS</span>
                 <span class="btn-icon" aria-hidden="true">
-                  <img src="./assets/svgs/download.svg" alt="" aria-hidden="true" />
+                  <img src="/site/assets/svgs/download.svg" alt="" aria-hidden="true" />
                 </span>
               </a>
             </div>
@@ -287,7 +291,7 @@
           <article class="download-card">
             <div class="download-card-header">
               <div class="download-icon">
-                <img src="./assets/svgs/os-apple.svg" alt="" aria-hidden="true" />
+                <img src="/site/assets/svgs/os-apple.svg" alt="" aria-hidden="true" />
               </div>
               <div>
                 <div class="download-title" data-i18n="downloads.cards.macos64.title">macOS 64-bit</div>
@@ -306,7 +310,7 @@
               >
                 <span data-i18n="downloads.cards.macos64.button">Descargar macOS 64-bit</span>
                 <span class="btn-icon" aria-hidden="true">
-                  <img src="./assets/svgs/download.svg" alt="" aria-hidden="true" />
+                  <img src="/site/assets/svgs/download.svg" alt="" aria-hidden="true" />
                 </span>
               </a>
             </div>
@@ -315,7 +319,7 @@
           <article class="download-card">
             <div class="download-card-header">
               <div class="download-icon">
-                <img src="./assets/svgs/os-linux.svg" alt="" aria-hidden="true" />
+                <img src="/site/assets/svgs/os-linux.svg" alt="" aria-hidden="true" />
               </div>
               <div>
                 <div class="download-title" data-i18n="downloads.cards.linux.title">Linux</div>
@@ -332,7 +336,7 @@
               >
                 <span data-i18n="downloads.cards.linux.button">Descargar Linux</span>
                 <span class="btn-icon" aria-hidden="true">
-                  <img src="./assets/svgs/download.svg" alt="" aria-hidden="true" />
+                  <img src="/site/assets/svgs/download.svg" alt="" aria-hidden="true" />
                 </span>
               </a>
             </div>
@@ -365,7 +369,7 @@
         <div class="sidebar-brand">
           <div class="brand-icon">
             <img
-              src="./assets/images/engine-branding/icon.png"
+              src="/site/assets/images/engine-branding/icon.png"
               alt="ALE Psych icon"
               draggable="false"
             />
@@ -377,7 +381,7 @@
         </div>
 
         <button class="icon-btn" id="closeSidebarBtn" aria-label="Close" type="button">
-          <img src="./assets/svgs/arrow-circle-left.svg" alt="" aria-hidden="true" />
+          <img src="/site/assets/svgs/arrow-circle-left.svg" alt="" aria-hidden="true" />
         </button>
       </div>
 
@@ -387,6 +391,6 @@
       </div>
     </aside>
 
-    <script type="module" src="./assets/js/main.js"></script>
+    <script type="module" src="/site/assets/js/main.js"></script>
   </body>
 </html>
