@@ -69,11 +69,15 @@ const toAbsoluteUrl = (value) => {
 const normalizePath = (pathname) => {
   let normalized = pathname;
   if (normalized === "/index.php") return "/";
+  if (normalized === "/index.html") return "/";
   if (normalized === "/site/downloads.php") return "/site/downloads";
   if (normalized === "/site/mods/mods.php") return "/site/mods";
   if (normalized === "/site/cookbook/index.php") return "/site/cookbook";
   if (normalized.endsWith(".php")) {
     normalized = normalized.replace(/\.php$/, "");
+  }
+  if (normalized.endsWith(".html")) {
+    normalized = normalized.replace(/\.html$/, "");
   }
   if (normalized.length > 1 && normalized.endsWith("/")) {
     normalized = normalized.replace(/\/+$/, "");
@@ -258,7 +262,10 @@ const getPageMeta = () => {
   const bodyMeta = getBodyMeta();
   const jsonLdType = (() => {
     const path = window.location.pathname;
-    if (!path.includes("/site/") && (path === "/" || path.endsWith("/index.php"))) {
+    if (
+      !path.includes("/site/") &&
+      (path === "/" || path.endsWith("/index.php") || path.endsWith("/index.html"))
+    ) {
       return "WebSite";
     }
     return "WebPage";

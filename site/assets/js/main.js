@@ -7,7 +7,9 @@ const LANGUAGE_KEY = "alePsychLanguage";
 const SUPPORTED_LANGS = ["es", "en"];
 
 const { pathname } = window.location;
-const isRootIndex = !pathname.includes("/site/") && (pathname === "/" || pathname.endsWith("/index.php"));
+const isRootIndex =
+  !pathname.includes("/site/") &&
+  (pathname === "/" || pathname.endsWith("/index.php") || pathname.endsWith("/index.html"));
 const isModsPage = pathname.startsWith("/site/mods");
 const siteRoot = isRootIndex ? "site" : isModsPage ? ".." : ".";
 const assetRoot = "/site/assets";

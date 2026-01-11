@@ -2,6 +2,7 @@ RewriteEngine On
 
 # Redirect canonical extensionless URLs
 RewriteRule ^index\.php$ / [R=301,L]
+RewriteRule ^index\.html$ / [R=301,L]
 RewriteRule ^site/downloads\.php$ /site/downloads [R=301,L]
 RewriteRule ^site/mods/mods\.php$ /site/mods [R=301,L]
 RewriteRule ^site/mods/mod-details\.php$ /site/mods/mod-details [R=301,L]
@@ -9,6 +10,10 @@ RewriteRule ^site/cookbook/index\.php$ /site/cookbook [R=301,L]
 
 # Redirect other .php URLs to extensionless versions
 RewriteCond %{THE_REQUEST} \s/+(.+?)\.php[\s?]
+RewriteRule ^ %1 [R=301,L]
+
+# Redirect other .html URLs to extensionless versions
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?]
 RewriteRule ^ %1 [R=301,L]
 
 # Preserve existing files and directories
