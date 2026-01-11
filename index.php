@@ -1,5 +1,9 @@
+<?php
+$defaultLang = 'es';
+require __DIR__ . '/site/includes/bootstrap.php';
+?>
 <!doctype html>
-<html lang="es">
+<html lang="<?= htmlspecialchars($pageLang, ENT_QUOTES, 'UTF-8'); ?>">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -43,15 +47,15 @@
     <meta name="twitter:image:alt" content="ALE Psych" />
     <meta name="twitter:url" content="https://alepsych.gamer.gd/" />
     <meta name="theme-color" content="#a78bfa" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./site/assets/icons/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./site/assets/icons/favicon-16.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./site/assets/icons/favicon-32.png" />
-    <link rel="icon" type="image/png" sizes="192x192" href="./site/assets/icons/favicon-192.png" />
-    <link rel="icon" type="image/png" sizes="512x512" href="./site/assets/icons/favicon-512.png" />
-    <link rel="manifest" href="./site/assets/icons/site.webmanifest" />
-    <link rel="stylesheet" href="./site/assets/css/base.css" />
-    <link rel="stylesheet" href="./site/assets/css/components.css" />
-    <script type="module" src="./site/assets/js/meta.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/site/assets/icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/site/assets/icons/favicon-16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/site/assets/icons/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/site/assets/icons/favicon-192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/site/assets/icons/favicon-512.png" />
+    <link rel="manifest" href="/site/assets/icons/site.webmanifest" />
+    <link rel="stylesheet" href="/site/assets/css/base.css" />
+    <link rel="stylesheet" href="/site/assets/css/components.css" />
+    <script type="module" src="/site/assets/js/meta.js"></script>
   </head>
   <body
     class="performance-lite"
@@ -78,13 +82,13 @@
       <div class="container topbar-inner">
         <div class="topbar-left">
           <button class="icon-btn" id="openSidebarBtn" aria-label="Toggle menu" type="button">
-            <img src="./site/assets/svgs/hamburger-menu.svg" alt="" aria-hidden="true" />
+            <img src="/site/assets/svgs/hamburger-menu.svg" alt="" aria-hidden="true" />
           </button>
 
           <div class="brand">
             <div class="brand-icon">
               <img
-                src="./site/assets/images/engine-branding/icon.png"
+                src="/site/assets/images/engine-branding/icon.png"
                 alt="ALE Psych icon"
                 draggable="false"
               />
@@ -126,13 +130,13 @@
             <a class="btn-primary" href="/site/downloads">
               <span data-i18n="home.primaryCta">Primeros Pasos</span>
               <span class="btn-icon" aria-hidden="true">
-                <img src="./site/assets/svgs/arrow-right.svg" alt="" aria-hidden="true" />
+                <img src="/site/assets/svgs/arrow-right.svg" alt="" aria-hidden="true" />
               </span>
             </a>
             <a class="btn-ghost" href="/site/cookbook">
               <span data-i18n="home.secondaryCta">Documentación</span>
               <span class="btn-icon" aria-hidden="true">
-                <img src="./site/assets/svgs/book.svg" alt="" aria-hidden="true" />
+                <img src="/site/assets/svgs/book.svg" alt="" aria-hidden="true" />
               </span>
             </a>
           </div>
@@ -145,7 +149,7 @@
             <div class="media-frame">
               <div class="aspect-video">
                 <img
-                  src="./site/assets/images/engine-branding/brandpitcure.png"
+                  src="/site/assets/images/engine-branding/brandpitcure.png"
                   alt="ALE Psych banner"
                   draggable="false"
                   loading="eager"
@@ -178,10 +182,10 @@
             <div class="dots" id="whyDots" aria-label="Why carousel dots"></div>
             <div class="arrows">
               <button class="icon-btn" id="whyPrev" aria-label="Previous" type="button">
-                <img src="./site/assets/svgs/arrow-circle-left.svg" alt="" aria-hidden="true" />
+                <img src="/site/assets/svgs/arrow-circle-left.svg" alt="" aria-hidden="true" />
               </button>
               <button class="icon-btn" id="whyNext" aria-label="Next" type="button">
-                <img src="./site/assets/svgs/arrow-circle-right.svg" alt="" aria-hidden="true" />
+                <img src="/site/assets/svgs/arrow-circle-right.svg" alt="" aria-hidden="true" />
               </button>
             </div>
           </div>
@@ -205,10 +209,10 @@
 
               <div class="preview-arrows">
                 <button class="icon-btn" id="prevPrev" aria-label="Previous" type="button">
-                  <img src="./site/assets/svgs/arrow-circle-left.svg" alt="" aria-hidden="true" />
+                  <img src="/site/assets/svgs/arrow-circle-left.svg" alt="" aria-hidden="true" />
                 </button>
                 <button class="icon-btn" id="prevNext" aria-label="Next" type="button">
-                  <img src="./site/assets/svgs/arrow-circle-right.svg" alt="" aria-hidden="true" />
+                  <img src="/site/assets/svgs/arrow-circle-right.svg" alt="" aria-hidden="true" />
                 </button>
               </div>
             </div>
@@ -243,13 +247,13 @@
             <a class="btn-primary" href="/site/downloads">
               <span data-i18n="home.ctaPrimary">Primeros Pasos</span>
               <span class="btn-icon" aria-hidden="true">
-                <img src="./site/assets/svgs/arrow-right.svg" alt="" aria-hidden="true" />
+                <img src="/site/assets/svgs/arrow-right.svg" alt="" aria-hidden="true" />
               </span>
             </a>
             <a class="btn-ghost" href="/site/cookbook">
               <span data-i18n="home.ctaSecondary">Documentación</span>
               <span class="btn-icon" aria-hidden="true">
-                <img src="./site/assets/svgs/book.svg" alt="" aria-hidden="true" />
+                <img src="/site/assets/svgs/book.svg" alt="" aria-hidden="true" />
               </span>
             </a>
           </div>
@@ -282,7 +286,7 @@
         <div class="sidebar-brand">
           <div class="brand-icon">
             <img
-              src="./site/assets/images/engine-branding/icon.png"
+              src="/site/assets/images/engine-branding/icon.png"
               alt="ALE Psych icon"
               draggable="false"
             />
@@ -294,7 +298,7 @@
         </div>
 
         <button class="icon-btn" id="closeSidebarBtn" aria-label="Close" type="button">
-          <img src="./site/assets/svgs/arrow-circle-left.svg" alt="" aria-hidden="true" />
+          <img src="/site/assets/svgs/arrow-circle-left.svg" alt="" aria-hidden="true" />
         </button>
       </div>
 
@@ -304,6 +308,6 @@
       </div>
     </aside>
 
-    <script type="module" src="./site/assets/js/main.js"></script>
+    <script type="module" src="/site/assets/js/main.js"></script>
   </body>
 </html>
